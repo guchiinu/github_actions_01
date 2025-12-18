@@ -43,3 +43,7 @@ jobs:
 
       - name: Set up Rust toolchain
         uses: dtolnay/rust-toolchain@1.75.0
+        
+      - name: Build release
+        if: github.ref == 'refs/heads/main'
+        run: cargo build --release
