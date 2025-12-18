@@ -31,3 +31,12 @@ jobs:
 
       - name: Test
         run: cargo test --verbose
+
+      - name: Build release
+        run: cargo build --release
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-world-binary
+          path: target/release/
