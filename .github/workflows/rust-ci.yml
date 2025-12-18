@@ -40,3 +40,6 @@ jobs:
         with:
           name: hello-world-binary
           path: target/release/
+
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@1.75.0
